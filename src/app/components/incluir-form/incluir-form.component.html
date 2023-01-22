@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="nome">Nome:</label>
+    <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="nome" required>
+  </div>
+  <div class="form-group">
+    <label for="instrutor">Instrutor:</label>
+    <input type="text" class="form-control" id="instrutor" name="instrutor" [(ngModel)]="instrutor" required>
+  </div>
+  <div class="form-group">
+    <label for="local">Local:</label>
+    <input type="text" class="form-control" id="local" name="local" [(ngModel)]="local" required>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <label for="instrutor">Carga horária:</label>
+      <input type="text" class="form-control" name="cargaHoraria" [(ngModel)]="cargaHoraria" required>
+    </div>
+    <div class="col">
+      <label for="dataInicio">Data início:</label>
+      <input type="date" class="form-control" name="dataInicio" [(ngModel)]="dataInicio" required>
+    </div>
+  </div>
+
+  <p class="text-danger erro invisivel mt-3">Por favor, preencha todos os campos!</p>
+  <p class="text-success sucesso invisivel mt-3">Curso adicionado com sucesso!</p>
+
+  <button class="btn btn-primary mb-4">Incluir</button>
+  <button class="btn btn-primary mb-4" routerLink="/">Voltar</button>
+</form>

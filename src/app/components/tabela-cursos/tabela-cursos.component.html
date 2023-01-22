@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th class="cel"></th>
+            <th class="cel">Código</th>
+            <th class="cel">Nome</th>
+            <th class="cel">Instrutor</th>
+            <th class="cel">Local</th>
+            <th class="cel">Carga Horária</th>
+            <th class="cel">Data Início</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let curso of cursos" class="rowBody">
+            <td class="cel especial"><input type="radio" disabled></td>
+            <td class="cel bold">{{curso.codigo}}</td>
+            <td class="cel">{{curso.nome}}</td>
+            <td class="cel">{{curso.instrutor}}</td>
+            <td class="cel">{{curso.local}}</td>
+            <td class="cel">{{curso.cargaHoraria}}</td>
+            <td class="cel">{{curso.dataInicio}}</td>
+        </tr>
+    </tbody>
+</table>
+<button routerLink="/incluir" class="btn btn-primary">Incluir</button>
